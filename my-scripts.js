@@ -1,25 +1,25 @@
-//set count
+//set databasecount
 if(localStorage.getItem("count") == null) {
 	localStorage.setItem("count", 0)
 }
 
-//update count
+//update html count to be database count
 function update() {
-	document.getElementById("count").innerHTML = localStorage.getItem("count");
+	document.getElementById("count").innerHTML = localStorage.getItem("count")
 }
 
-update();
+update()
 
-//add one to count
+//add one to database count
 function plusOne() {
-	localStorage.setItem("count", (Number(localStorage.getItem("count")) + 1));
-	update();
+	localStorage.setItem("count", (Number(localStorage.getItem("count")) + 1))
+	update()
 }
 
-//reset count
+//reset database count
 function reset() {
 	if (confirm("Are you sure you want to clear your clicks?")) {
-    	localStorage.setItem("count",0);
-		update();
+    	localStorage.setItem("count",0)
+		update()
 	}
 }
